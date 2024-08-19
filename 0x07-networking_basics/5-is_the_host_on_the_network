@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# A string that pings an IP address passed as an argument
+# Requirement: Accepts a string as an argument
+# Display usage: 5-1s_the_host)on_the_network
+# If no argunment passed 
+# Ping the IP 5 times
+
+if [$# -eq 0 ]; then
+	echo "usage: 5-is_the_host_on_the_network IP_ADDRESS}"
+	exit
+elif [$# -gt 1 ]; then
+	echo "usage: 5-is_the_host_on_the_network IP_ADDRESS}"
+	exit
+else
+	ping "$1" -c 5
+fi
