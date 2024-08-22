@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Making it short ansd sweet
-apt-get -y update
-apt-get install -y nginx
+cat /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default
 sudo service nginx start
+rm /run/nginx.pid
